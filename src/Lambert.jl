@@ -11,6 +11,7 @@ using QuadGK, Interpolations
 using InfiniteOpt, Ipopt
 using FastGaussQuadrature
 using LegendrePolynomials
+# using NLopt
 # using Graphs
 # using NLopt
 
@@ -23,7 +24,7 @@ export collocation_lambert
 export get_collocation_cost
 export pseudospectral_continuous_lambert
 export pseudospectral_impulsive_lambert
-export plot_results
+export plot_results, plot_results2
 
 export _get_full_primer_history
 export _get_split_histories
@@ -59,6 +60,7 @@ include("Primers.jl")
 include("Collocation.jl")
 include("Plotting.jl")
 include("Pseudospectral.jl")
+include("PseudoPrimer.jl")
 # include("RRTStar.jl")
 
 const DISTANCE_UNIT = 6378.1363

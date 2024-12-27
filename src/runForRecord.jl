@@ -68,6 +68,7 @@ dvtotal2 *= tof / 2
 # end
 # dvtotal3 *= tof / 2
 # model2, states2, control2 = pseudospectral_impulsive_lambert(x0, x1, tof, poly_order=100, verbose=true, constrain_u=true)
+model2, nodes2 = pseudospectral_impulsive_lambert(x0, x1, tof, poly_order=N, verbose=true, constrain_u=true, mu=1.0)
 
 # Then get time numbers from this block, after having been precompiled
 @time basic_lambert(x0[1:3], x0[4:6], x1[1:3], tof, n, mu=mu, verbose=false, v2=x1[4:6])
